@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net462;net452</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company>Fintech</Company>
+    <Version>1.0.0</Version>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageTags>FTConf.Config FTLab Fintech</PackageTags>
+    <RepositoryType />
+    <RepositoryUrl></RepositoryUrl>
+    <Description>FTConf.Config FTLab Fintech</Description>
+    <Authors>FTLab</Authors>
+    <PackageProjectUrl>https://github.com/ftlab/FTConf</PackageProjectUrl>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\FTConf.Config.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>
