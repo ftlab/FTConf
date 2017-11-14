@@ -20,6 +20,11 @@ namespace FTConf.Config
         private readonly Lazy<ConfigConnectionStringsSection> _connectionStrings;
 
         /// <summary>
+        /// секция настроек
+        /// </summary>
+        private readonly Lazy<ConfigAppSettingsSection> _appSettings;
+
+        /// <summary>
         /// Конструктор
         /// </summary>
         /// <param name="config">конфиг</param>
@@ -28,13 +33,16 @@ namespace FTConf.Config
             _config = config ?? throw new ArgumentNullException(nameof(config));
 
             _connectionStrings = new Lazy<ConfigConnectionStringsSection>(()
-                => new ConfigConnectionStringsSection(Config));
+                => new ConfigConnectionStringsSection(this));
+
+            _appSettings = new Lazy<ConfigAppSettingsSection>(()
+                => new ConfigAppSettingsSection(this));
         }
 
         /// <summary>
         /// Конфигурация
         /// </summary>
-        public Configuration Config
+        internal Configuration Config
             => _config;
 
         /// <summary>
@@ -43,8 +51,20 @@ namespace FTConf.Config
         public ConfigConnectionStringsSection ConnectionStrings
             => _connectionStrings.Value;
 
+        /// <summary>
+        /// Секция настроек
+        /// </summary>
+        public ConfigAppSettingsSection AppSettings
+            => _appSettings.Value;
+
+        /// <summary>
+        /// Секция строк соединений
+        /// </summary>
         IConnectionStringsSection IConfiguration.ConnectionStrings => ConnectionStrings;
 
-        IAppSettingsSection IConfiguration.AppSettings => throw new NotImplementedException();
+        /// <summary>
+        /// Секция настроек
+        /// </summary>
+        IAppSettingsSection IConfiguration.AppSettings => AppSettings;
     }
 }

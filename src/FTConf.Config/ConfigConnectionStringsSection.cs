@@ -8,12 +8,15 @@ namespace FTConf.Config
     /// </summary>
     public class ConfigConnectionStringsSection : IConnectionStringsSection
     {
-        private Configuration _config;
+        private ConfigConfiguration _config;
 
-        public ConfigConnectionStringsSection(Configuration config)
+        public ConfigConnectionStringsSection(ConfigConfiguration config)
         {
             _config = config;
         }
+
+        public ConfigConfiguration Config
+            => _config;
 
         IConnectionString IConnectionStringsSection.this[string name] { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 

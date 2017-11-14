@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FTConf.Config", "FTConf.Con
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FTConf.Json", "FTConf.Json\FTConf.Json.csproj", "{19B8FFF3-DACD-471A-BF8B-0C3EAA6EC9D8}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FTConf.Ini", "FTConf.Ini\FTConf.Ini.csproj", "{B7D76F87-6CC2-449E-A58E-58CB230BA3B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{19B8FFF3-DACD-471A-BF8B-0C3EAA6EC9D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19B8FFF3-DACD-471A-BF8B-0C3EAA6EC9D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19B8FFF3-DACD-471A-BF8B-0C3EAA6EC9D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7D76F87-6CC2-449E-A58E-58CB230BA3B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7D76F87-6CC2-449E-A58E-58CB230BA3B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7D76F87-6CC2-449E-A58E-58CB230BA3B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7D76F87-6CC2-449E-A58E-58CB230BA3B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
