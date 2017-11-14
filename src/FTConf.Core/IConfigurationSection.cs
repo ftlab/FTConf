@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FTConf.Core
+﻿namespace FTConf.Core
 {
     /// <summary>
     /// Секция конфигурации
