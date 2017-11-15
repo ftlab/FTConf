@@ -1,5 +1,6 @@
 ﻿using System.Configuration;
 using FTConf.Core;
+using System;
 
 namespace FTConf.Config
 {
@@ -18,16 +19,26 @@ namespace FTConf.Config
         public ConfigConfiguration Config
             => _config;
 
-        IConnectionString IConnectionStringsSection.this[string name] { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+        IConnectionString IConnectionStringsSection.this[string name]
+        {
+            get => GetConnectionString(name);
+            set => SetConnectionString(name, (ConfigConnectionString)value);
+        }
+
+        public ConfigConnectionString GetConnectionString(string name)
+        {
+            throw new NotImplementedException();
+        }
 
         IConnectionString IConnectionStringsSection.GetConnectionString(string name)
+            => GetConnectionString(name);
+
+        public void SetConnectionString(string name, ConfigConnectionString connectionString)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         void IConnectionStringsSection.SetConnectionString(string name, IConnectionString connectionString)
-        {
-            throw new System.NotImplementedException();
-        }
+            => SetConnectionString(name, (ConfigConnectionString)connectionString);
     }
 }
